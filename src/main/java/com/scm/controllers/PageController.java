@@ -15,4 +15,19 @@ public class PageController {
         model.addAttribute("Youtube", "Abhi");
         return "home";
     }
+
+    //about route
+    @RequestMapping("/about")
+    public String aboutpage(){
+        System.out.println("About Page Loading");
+        return "about";
+    }
+
+
+    //services
+    @RequestMapping("/services")
+    public String servicespage(){
+        System.out.println("Services Page Loading");
+        return "services";
+    }
 }
