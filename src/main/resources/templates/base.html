@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" th:fragment="parent(content , title)" xmlns:th="http://www.thymeleaf.org">
+<html class="dark" lang="en" th:fragment="parent(content , title)" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,21 @@
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" data-th-href="@{'/CSS/output.css'}">
 </head>
-<body>
+<body class="dark:bg-gray-900 dark:text-white">
     <!-- Common Header -->
-    <!-- Main Content -->
-     <section th:replace="${content}"></section>
+    <div data-th-replace="navbar :: navbar">
 
+    </div> 
+
+    <!-- Main Content -->
+     <div class="p-4" >
+        <section th:replace="${content}"></section>
+     </div>
 
     <!-- Common footer -->
+     <footer class="p-4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime?
+     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </body>
